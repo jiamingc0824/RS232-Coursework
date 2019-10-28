@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>TopLevel - Behavioral (C:/Users/Jia Ming/Desktop/RS232/RS232/TopLevel.vhd)</SelectedItem>
+         <SelectedItem>TopLevel - Behavioral (C:/Users/Jia Ming/Desktop/RS232 Coursework/RS232/RS232/TopLevel.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>TopLevel - Behavioral (C:/Users/Jia Ming/Desktop/RS232/RS232/TopLevel.vhd)</CurrentItem>
+      <CurrentItem>TopLevel - Behavioral (C:/Users/Jia Ming/Desktop/RS232 Coursework/RS232/RS232/TopLevel.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -71,7 +71,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
@@ -97,13 +97,13 @@
          <ClosedNode>/tb_RS232Rxd - behavior C:|Users|Jia Ming|Desktop|RS232|RS232|tb_RS232Rxd.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>tb_RS232Rxd - behavior (C:/Users/Jia Ming/Desktop/RS232/RS232/tb_RS232Rxd.vhd)</SelectedItem>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>tb_RS232Rxd - behavior (C:/Users/Jia Ming/Desktop/RS232/RS232/tb_RS232Rxd.vhd)</CurrentItem>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -124,12 +124,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>

@@ -1,6 +1,0 @@
-vhdl work "RS232Txd.vhd"
-vhdl work "RS232Rxd.vhd"
-vhdl work "Scan4Digit.vhd"
-vhdl work "RS232.vhd"
-vhdl work "D4to7Encoder.vhd"
-vhdl work "TopLevel.vhd"
