@@ -1,0 +1,29 @@
+
+
+NET "Ca" LOC = L18;
+NET "Cb" LOC = F18;
+NET "Cc" LOC = D17;
+NET "Cd" LOC = D16;
+NET "Ce" LOC = G14;
+NET "Cf" LOC = J17;
+NET "Cg" LOC = H14;
+NET "Reset" LOC = B18;
+NET "SystemClock" LOC = B8;
+NET "Rxd" LOC = U6;
+NET "An[3]" LOC = F15;
+NET "An[0]" LOC = F17;
+NET "An[1]" LOC = H17;
+NET "An[2]" LOC = C18;
+
+# PlanAhead Generated physical constraints 
+
+NET "Send" LOC = D18;
+NET "Txd" LOC = P9;
+NET "DataIn[0]" LOC = G18;
+NET "DataIn[1]" LOC = H18;
+NET "DataIn[2]" LOC = K18;
+NET "DataIn[3]" LOC = K17;
+NET "DataIn[4]" LOC = L14;
+NET "DataIn[5]" LOC = L13;
+NET "DataIn[6]" LOC = N17;
+NET "DataIn[7]" LOC = R17;

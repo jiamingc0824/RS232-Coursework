@@ -1,0 +1,736 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: TopLevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopLevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopLevel"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : TopLevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jia Ming/Desktop/RS232/RS232/RS232Rxd.vhd" in Library work.
+Architecture behavioral of Entity rs232rxd is up to date.
+Compiling vhdl file "C:/Users/Jia Ming/Desktop/RS232/RS232/RS232Txd.vhd" in Library work.
+Entity <rs232txd> compiled.
+Entity <rs232txd> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jia Ming/Desktop/RS232/RS232/RS232.vhd" in Library work.
+Architecture behavioral of Entity rs232 is up to date.
+Compiling vhdl file "C:/Users/Jia Ming/Desktop/RS232/RS232/D4to7Encoder.vhd" in Library work.
+Architecture behavioral of Entity d4to7decoder is up to date.
+Compiling vhdl file "C:/Users/Jia Ming/Desktop/RS232/RS232/Scan4Digit.vhd" in Library work.
+Architecture behavioral of Entity scan4digit is up to date.
+Compiling vhdl file "C:/Users/Jia Ming/Desktop/RS232/RS232/TopLevel.vhd" in Library work.
+Architecture behavioral of Entity toplevel is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopLevel> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RS232> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <D4to7Decoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Scan4Digit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Rs232Rxd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RS232Txd> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopLevel> in library <work> (Architecture <behavioral>).
+Entity <TopLevel> analyzed. Unit <TopLevel> generated.
+
+Analyzing Entity <RS232> in library <work> (Architecture <behavioral>).
+Entity <RS232> analyzed. Unit <RS232> generated.
+
+Analyzing Entity <Rs232Rxd> in library <work> (Architecture <behavioral>).
+    Set property "enum_encoding = 00 01 11" for signal <presState>.
+    Set property "enum_encoding = 00 01 11" for signal <nextState>.
+Entity <Rs232Rxd> analyzed. Unit <Rs232Rxd> generated.
+
+Analyzing Entity <RS232Txd> in library <work> (Architecture <behavioral>).
+    Set property "enum_encoding = 00 01 11" for signal <presState>.
+    Set property "enum_encoding = 00 01 11" for signal <nextState>.
+Entity <RS232Txd> analyzed. Unit <RS232Txd> generated.
+
+Analyzing Entity <D4to7Decoder> in library <work> (Architecture <behavioral>).
+Entity <D4to7Decoder> analyzed. Unit <D4to7Decoder> generated.
+
+Analyzing Entity <Scan4Digit> in library <work> (Architecture <behavioral>).
+Entity <Scan4Digit> analyzed. Unit <Scan4Digit> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <D4to7Decoder>.
+    Related source file is "C:/Users/Jia Ming/Desktop/RS232/RS232/D4to7Encoder.vhd".
+    Found 16x7-bit ROM for signal <seg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <D4to7Decoder> synthesized.
+
+
+Synthesizing Unit <Scan4Digit>.
+    Related source file is "C:/Users/Jia Ming/Desktop/RS232/RS232/Scan4Digit.vhd".
+    Found 1-of-4 decoder for signal <an>.
+    Found 16-bit up counter for signal <iCount16>.
+    Found 7-bit 4-to-1 multiplexer for signal <iDigitOut>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <Scan4Digit> synthesized.
+
+
+Synthesizing Unit <Rs232Rxd>.
+    Related source file is "C:/Users/Jia Ming/Desktop/RS232/RS232/RS232Rxd.vhd".
+    Found finite state machine <FSM_0> for signal <presState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | iClock1x                  (rising_edge)        |
+    | Reset              | iClock1xEnable            (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | stidle                                         |
+    | Power Up State     | stidle                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <iClock1x>.
+    Found 1-bit register for signal <iClock1xEnable>.
+    Found 4-bit register for signal <iClockDiv>.
+    Found 4-bit adder for signal <iClockDiv$addsub0000> created at line 45.
+    Found 8-bit register for signal <iDataOut1>.
+    Found 8-bit register for signal <iDataOut2>.
+    Found 4-bit up counter for signal <iNoBitsReceived>.
+    Found 1-bit register for signal <iRxd1>.
+    Found 1-bit register for signal <iRxd2>.
+    Found 8-bit register for signal <iShiftRegister>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Rs232Rxd> synthesized.
+
+
+Synthesizing Unit <RS232Txd>.
+    Related source file is "C:/Users/Jia Ming/Desktop/RS232/RS232/RS232Txd.vhd".
+    Found finite state machine <FSM_1> for signal <presState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | iClock1x                  (rising_edge)        |
+    | Reset              | iClock1xEnable            (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | stidle                                         |
+    | Power Up State     | stidle                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <iEnableShift>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <iEnableTxdBuffer>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <Txd>.
+    Found 1-bit register for signal <iClock1x>.
+    Found 1-bit register for signal <iClock1xEnable>.
+    Found 4-bit up counter for signal <iClockDiv>.
+    Found 4-bit up counter for signal <iNoBitsSent>.
+    Found 1-bit register for signal <iSend>.
+    Found 8-bit register for signal <iTxdBuffer>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+Unit <RS232Txd> synthesized.
+
+
+Synthesizing Unit <RS232>.
+    Related source file is "C:/Users/Jia Ming/Desktop/RS232/RS232/RS232.vhd".
+Unit <RS232> synthesized.
+
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "C:/Users/Jia Ming/Desktop/RS232/RS232/TopLevel.vhd".
+    Found 9-bit up counter for signal <iCount9>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <TopLevel> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+ 9-bit up counter                                      : 1
+# Registers                                            : 13
+ 1-bit register                                        : 8
+ 4-bit register                                        : 1
+ 8-bit register                                        : 4
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Multiplexers                                         : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <U1/U2/presState/FSM> on signal <presState[1:2]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ stidle | 00
+ stdata | 01
+ ststop | 11
+--------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <U1/U1/presState/FSM> on signal <presState[1:2]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ stidle | 00
+ stdata | 01
+ ststop | 11
+--------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+ 9-bit up counter                                      : 1
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Multiplexers                                         : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TopLevel> ...
+
+Optimizing unit <Rs232Rxd> ...
+
+Optimizing unit <RS232Txd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopLevel, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopLevel.ngr
+Top Level Output File Name         : TopLevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 182
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 23
+#      LUT2                        : 19
+#      LUT3                        : 30
+#      LUT3_D                      : 1
+#      LUT4                        : 42
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
+#      MUXCY                       : 23
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 87
+#      FD                          : 16
+#      FDC                         : 12
+#      FDE                         : 39
+#      FDPE                        : 1
+#      FDR                         : 9
+#      FDRE                        : 2
+#      FDS                         : 2
+#      FDSE                        : 4
+#      LD                          : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 11
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       66  out of   4656     1%  
+ Number of Slice Flip Flops:             87  out of   9312     0%  
+ Number of 4 input LUTs:                125  out of   9312     1%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    232    10%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)          | Load  |
+-----------------------------------------------------------------+--------------------------------+-------+
+SystemClock                                                      | BUFGP                          | 25    |
+U1/U1/iClock1x1                                                  | BUFG                           | 30    |
+iCount9_8                                                        | NONE(U1/U1/iRxd2)              | 15    |
+U1/U2/iClock1x                                                   | NONE(U1/U2/iNoBitsSent_3)      | 15    |
+U1/U2/presState_cmp_eq0001(U1/U2/presState_FSM_Out01:O)          | NONE(*)(U1/U2/iEnableShift)    | 1     |
+U1/U2/iEnableTxdBuffer_not0001(U1/U2/iEnableTxdBuffer_not00011:O)| NONE(*)(U1/U2/iEnableTxdBuffer)| 1     |
+-----------------------------------------------------------------+--------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------+------------------------------+-------+
+Control Signal                                             | Buffer(FF name)              | Load  |
+-----------------------------------------------------------+------------------------------+-------+
+U1/U2/iClock1xEnable_inv(U1/U2/iClock1xEnable_inv1_INV_0:O)| NONE(U1/U2/Txd)              | 7     |
+U1/U1/iClock1xEnable_inv(U1/U1/iClock1xEnable_inv1_INV_0:O)| NONE(U1/U1/iNoBitsReceived_0)| 6     |
+-----------------------------------------------------------+------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.229ns (Maximum Frequency: 236.443MHz)
+   Minimum input arrival time before clock: 4.684ns
+   Maximum output required time after clock: 6.763ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SystemClock'
+  Clock period: 4.229ns (frequency: 236.443MHz)
+  Total number of paths / destination ports: 262 / 34
+-------------------------------------------------------------------------
+Delay:               4.229ns (Levels of Logic = 2)
+  Source:            iCount9_8 (FF)
+  Destination:       iCount9_0 (FF)
+  Source Clock:      SystemClock rising
+  Destination Clock: SystemClock rising
+
+  Data Path: iCount9_8 to iCount9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.514   0.896  iCount9_8 (iCount9_8)
+     LUT4_L:I3->LO         1   0.612   0.103  iCount9_or000040_SW0 (N52)
+     LUT4:I3->O            9   0.612   0.697  iCount9_or000040 (iCount9_or0000)
+     FDR:R                     0.795          iCount9_0
+    ----------------------------------------
+    Total                      4.229ns (2.533ns logic, 1.696ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/U1/iClock1x1'
+  Clock period: 3.828ns (frequency: 261.247MHz)
+  Total number of paths / destination ports: 185 / 53
+-------------------------------------------------------------------------
+Delay:               3.828ns (Levels of Logic = 2)
+  Source:            U1/U1/iNoBitsReceived_2 (FF)
+  Destination:       U1/U1/iShiftRegister_7 (FF)
+  Source Clock:      U1/U1/iClock1x1 rising
+  Destination Clock: U1/U1/iClock1x1 rising
+
+  Data Path: U1/U1/iNoBitsReceived_2 to U1/U1/iShiftRegister_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.603  U1/U1/iNoBitsReceived_2 (U1/U1/iNoBitsReceived_2)
+     LUT3_D:I0->O          1   0.612   0.360  U1/U1/iEnableDataOut_SW0 (N50)
+     LUT4:I3->O            8   0.612   0.643  U1/U1/iEnableDataOut_inv1 (U1/U1/iEnableDataOut_inv)
+     FDE:CE                    0.483          U1/U1/iShiftRegister_0
+    ----------------------------------------
+    Total                      3.828ns (2.221ns logic, 1.607ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'iCount9_8'
+  Clock period: 3.389ns (frequency: 295.090MHz)
+  Total number of paths / destination ports: 64 / 27
+-------------------------------------------------------------------------
+Delay:               3.389ns (Levels of Logic = 1)
+  Source:            U1/U2/iClock1xEnable (FF)
+  Destination:       U1/U2/iClockDiv_3 (FF)
+  Source Clock:      iCount9_8 rising
+  Destination Clock: iCount9_8 rising
+
+  Data Path: U1/U2/iClock1xEnable to U1/U2/iClockDiv_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            12   0.514   0.969  U1/U2/iClock1xEnable (U1/U2/iClock1xEnable)
+     LUT3:I0->O            4   0.612   0.499  U1/U2/iClockDiv_and00001 (U1/U2/iClockDiv_and0000)
+     FDRE:R                    0.795          U1/U2/iClockDiv_0
+    ----------------------------------------
+    Total                      3.389ns (1.921ns logic, 1.468ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/U2/iClock1x'
+  Clock period: 2.865ns (frequency: 349.034MHz)
+  Total number of paths / destination ports: 26 / 14
+-------------------------------------------------------------------------
+Delay:               2.865ns (Levels of Logic = 2)
+  Source:            U1/U2/iNoBitsSent_1 (FF)
+  Destination:       U1/U2/presState_FSM_FFd1 (FF)
+  Source Clock:      U1/U2/iClock1x rising
+  Destination Clock: U1/U2/iClock1x rising
+
+  Data Path: U1/U2/iNoBitsSent_1 to U1/U2/presState_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.514   0.607  U1/U2/iNoBitsSent_1 (U1/U2/iNoBitsSent_1)
+     LUT4_D:I1->LO         1   0.612   0.252  U1/U2/presState_cmp_eq00001 (N56)
+     LUT3:I0->O            1   0.612   0.000  U1/U2/presState_FSM_FFd1-In1 (U1/U2/presState_FSM_FFd1-In)
+     FDC:D                     0.268          U1/U2/presState_FSM_FFd1
+    ----------------------------------------
+    Total                      2.865ns (2.006ns logic, 0.859ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SystemClock'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.931ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       iCount9_0 (FF)
+  Destination Clock: SystemClock rising
+
+  Data Path: Reset to iCount9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.721  Reset_IBUF (Reset_IBUF)
+     LUT4:I0->O            9   0.612   0.697  iCount9_or000040 (iCount9_or0000)
+     FDR:R                     0.795          iCount9_0
+    ----------------------------------------
+    Total                      3.931ns (2.513ns logic, 1.418ns route)
+                                       (63.9% logic, 36.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/U1/iClock1x1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.754ns (Levels of Logic = 1)
+  Source:            Rxd (PAD)
+  Destination:       U1/U1/iShiftRegister_7 (FF)
+  Destination Clock: U1/U1/iClock1x1 rising
+
+  Data Path: Rxd to U1/U1/iShiftRegister_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  Rxd_IBUF (Rxd_IBUF)
+     FDE:D                     0.268          U1/U1/iShiftRegister_7
+    ----------------------------------------
+    Total                      1.754ns (1.374ns logic, 0.380ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'iCount9_8'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              4.684ns (Levels of Logic = 3)
+  Source:            Reset (PAD)
+  Destination:       U1/U1/iClockDiv_3 (FF)
+  Destination Clock: iCount9_8 rising
+
+  Data Path: Reset to U1/U1/iClockDiv_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.721  Reset_IBUF (Reset_IBUF)
+     LUT2:I0->O            4   0.612   0.651  U1/U1/iRxd1_or00001 (U1/U1/iRxd1_or0000)
+     LUT4:I0->O            4   0.612   0.499  U1/U1/iClockDiv_not0001 (U1/U1/iClockDiv_not0001)
+     FDE:CE                    0.483          U1/U1/iClockDiv_0
+    ----------------------------------------
+    Total                      4.684ns (2.813ns logic, 1.871ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/U2/iClock1x'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.412ns (Levels of Logic = 2)
+  Source:            DataIn<7> (PAD)
+  Destination:       U1/U2/iTxdBuffer_7 (FF)
+  Destination Clock: U1/U2/iClock1x rising
+
+  Data Path: DataIn<7> to U1/U2/iTxdBuffer_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.426  DataIn_7_IBUF (DataIn_7_IBUF)
+     LUT2:I1->O            1   0.612   0.000  U1/U2/iTxdBuffer_mux0000<7>1 (U1/U2/iTxdBuffer_mux0000<7>)
+     FDE:D                     0.268          U1/U2/iTxdBuffer_7
+    ----------------------------------------
+    Total                      2.412ns (1.986ns logic, 0.426ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SystemClock'
+  Total number of paths / destination ports: 29 / 11
+-------------------------------------------------------------------------
+Offset:              6.004ns (Levels of Logic = 3)
+  Source:            U6/iCount16_14 (FF)
+  Destination:       Ca (PAD)
+  Source Clock:      SystemClock rising
+
+  Data Path: U6/iCount16_14 to Ca
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              19   0.514   1.074  U6/iCount16_14 (U6/iCount16_14)
+     LUT3:I0->O            1   0.612   0.000  U6/Mmux_iDigitOut_3 (U6/Mmux_iDigitOut_3)
+     MUXF5:I1->O           1   0.278   0.357  U6/Mmux_iDigitOut_2_f5 (Ca_OBUF)
+     OBUF:I->O                 3.169          Ca_OBUF (Ca)
+    ----------------------------------------
+    Total                      6.004ns (4.573ns logic, 1.431ns route)
+                                       (76.2% logic, 23.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/U1/iClock1x1'
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Offset:              6.763ns (Levels of Logic = 4)
+  Source:            U1/U1/iDataOut1_0 (FF)
+  Destination:       Ca (PAD)
+  Source Clock:      U1/U1/iClock1x1 rising
+
+  Data Path: U1/U1/iDataOut1_0 to Ca
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.514   0.795  U1/U1/iDataOut1_0 (U1/U1/iDataOut1_0)
+     LUT4:I0->O            1   0.612   0.426  U2/Mrom_seg51 (U2/Mrom_seg5)
+     LUT3:I1->O            1   0.612   0.000  U6/Mmux_iDigitOut_41 (U6/Mmux_iDigitOut_41)
+     MUXF5:I0->O           1   0.278   0.357  U6/Mmux_iDigitOut_2_f5_0 (Cb_OBUF)
+     OBUF:I->O                 3.169          Cb_OBUF (Cb)
+    ----------------------------------------
+    Total                      6.763ns (5.185ns logic, 1.578ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/U2/iClock1x'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            U1/U2/Txd (FF)
+  Destination:       Txd (PAD)
+  Source Clock:      U1/U2/iClock1x rising
+
+  Data Path: U1/U2/Txd to Txd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.514   0.357  U1/U2/Txd (U1/U2/Txd)
+     OBUF:I->O                 3.169          Txd_OBUF (Txd)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.72 secs
+ 
+--> 
+
+Total memory usage is 4524988 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

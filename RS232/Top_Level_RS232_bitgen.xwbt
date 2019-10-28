@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Jia Ming\Desktop\RS232\RS232\Top_Level_RS232.ncd
+OUTFILE=C:\Users\Jia Ming\Desktop\RS232\RS232\Top_Level_RS232.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\Users\Jia Ming\Desktop\RS232\RS232
+LICENSE=WebPack
+USER_INFO=__0_0_0
