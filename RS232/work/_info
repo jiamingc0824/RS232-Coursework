@@ -1,0 +1,174 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jia Ming/Desktop/RS232 Coursework/RS232/RS232
+Ers232rxd
+Z1 w1572237051
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8RS232Rxd.vhd
+Z7 FRS232Rxd.vhd
+l0
+L5
+VOIdLAlka;<Bm]PD5=ORI?1
+!s100 JUh[9lT=dkYHJ<M:@HJHG3
+Z8 OP;C;10.4a;61
+31
+Z9 !s110 1572501956
+!i10b 1
+Z10 !s108 1572501956.000000
+Z11 !s90 -reportprogress|300|-explicit|-93|RS232Rxd.vhd|
+Z12 !s107 RS232Rxd.vhd|
+!i113 1
+Z13 o-explicit -93 -O0
+Z14 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 8 rs232rxd 0 22 OIdLAlka;<Bm]PD5=ORI?1
+l27
+L11
+Vll[lF14L6YlJJ@=WXGTBa3
+!s100 ;M6`TJDUWFg<2XBQ[UP;^2
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ers232txd
+Z15 w1572501819
+R2
+R3
+R4
+R5
+R0
+Z16 8RS232Txd.vhd
+Z17 FRS232Txd.vhd
+l0
+L5
+V:[njm`4ONaSFHfo[CAR7Z0
+!s100 5dPZh`[jze4R@bC8588H:1
+R8
+31
+Z18 !s110 1572502703
+!i10b 1
+Z19 !s108 1572502703.000000
+Z20 !s90 -reportprogress|300|-explicit|-93|RS232Txd.vhd|
+Z21 !s107 RS232Txd.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 8 rs232txd 0 22 :[njm`4ONaSFHfo[CAR7Z0
+l24
+L12
+VP@2f8jc8Z`G6mfV_:ZSoo1
+!s100 SD0GFVG4JC:cfkFDcDEjS2
+R8
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Etb_rs232rxd
+Z22 w1572016938
+R4
+R5
+R0
+Z23 8tb_RS232Rxd.vhd
+Z24 Ftb_RS232Rxd.vhd
+l0
+L4
+VD;N5o=CKfUY0>Ylgo:bIN2
+!s100 [3LcZjGzi8QL5zEAkgdjb3
+R8
+31
+R9
+!i10b 1
+R10
+Z25 !s90 -reportprogress|300|-explicit|-93|tb_RS232Rxd.vhd|
+Z26 !s107 tb_RS232Rxd.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R4
+R5
+DEx4 work 11 tb_rs232rxd 0 22 D;N5o=CKfUY0>Ylgo:bIN2
+l32
+L7
+VK9Xa9Wc>j5L8bbHZ3m3XU0
+!s100 VL8;MEV73WY2C>JhI37<G3
+R8
+31
+R9
+!i10b 1
+R10
+R25
+R26
+!i113 1
+R13
+R14
+Etb_rs232txd
+Z27 w1572501830
+R4
+R5
+R0
+Z28 8tb_RS232Txd.vhd
+Z29 Ftb_RS232Txd.vhd
+l0
+L4
+VPVN1agHZJ[:MF]3]IX4GF0
+!s100 3T1S<:4W8WdJF9TbX9]a^2
+R8
+31
+R18
+!i10b 1
+R19
+Z30 !s90 -reportprogress|300|-explicit|-93|tb_RS232Txd.vhd|
+Z31 !s107 tb_RS232Txd.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R4
+R5
+Z32 DEx4 work 11 tb_rs232txd 0 22 PVN1agHZJ[:MF]3]IX4GF0
+l32
+L7
+VXd[ATkffSVTjYRfN5d7=a2
+!s100 ^fk8zX[GdXi[GRe4L[:`10
+R8
+31
+R18
+!i10b 1
+R19
+R30
+R31
+!i113 1
+R13
+R14

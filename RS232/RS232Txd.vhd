@@ -33,7 +33,7 @@ begin
             else
                 iSend <= Send;
             end if;
-            if Send = '1' and iSend = '1' and iClock1xEnable = '0' then
+            if Send = '0' and iSend = '1' and iClock1xEnable = '0' then
                 iClock1xEnable <= '1';
             end if;
             if iClock1xEnable = '1' then
@@ -67,6 +67,8 @@ begin
     begin
         -- signal defaults
         iReset <= '0';
+        iEnableShift     <= '0';
+        iEnableTxdBuffer <= '0';
 
         case presState is
             when stIdle =>
@@ -78,12 +80,10 @@ begin
                 end if;
             when stData =>
                 if iNoBitsSent = "1000" then
-                    iEnableShift <= '0';
-                    nextState    <= stStop;
+                    nextState <= stStop;
                 else
-                    iEnableShift     <= '1';
-                    iEnableTxdBuffer <= '0';
-                    nextState        <= stData;
+                    iEnableShift <= '1';
+                    nextState    <= stData;
                 end if;
             when stStop =>
                 nextState <= stIdle;
