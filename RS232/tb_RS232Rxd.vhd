@@ -54,19 +54,17 @@ begin
    begin
       -- hold reset state for 100 ns.
       wait for 100 ns;
-
       wait for Clock16x_period * 10;
 
       -- insert stimulus here 
-
       tb_Reset <= '1';
       wait for 1.5 * Clock16x_period;
       tb_Reset <= '0';
+
       tb_rxd   <= '1';
       wait for 5.5 * Clock16x_period;
       tb_rxd <= '0'; -- Start bit
       wait for 16 * Clock16x_period;
-
       tb_rxd <= '0'; -- Bit 0
       wait for 16 * Clock16x_period;
       tb_rxd <= '1'; -- Bit 1
@@ -83,13 +81,11 @@ begin
       wait for 16 * Clock16x_period;
       tb_rxd <= '1'; -- Bit 7
       wait for 16 * Clock16x_period;
-
       tb_rxd <= '1'; -- Stop bit
       wait for 16 * Clock16x_period;
 
       tb_rxd <= '0'; -- Start bit
       wait for 16 * Clock16x_period;
-
       tb_rxd <= '1'; -- Bit 0
       wait for 16 * Clock16x_period;
       tb_rxd <= '0'; -- Bit 1
@@ -106,7 +102,6 @@ begin
       wait for 16 * Clock16x_period;
       tb_rxd <= '0'; -- Bit 7
       wait for 16 * Clock16x_period;
-
       tb_rxd <= '1'; -- Stop bit
       wait for 16 * Clock16x_period;
 

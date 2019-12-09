@@ -71,7 +71,7 @@ begin
       tb_Send <= '1';
       wait for 4 * Clock16x_period;
       tb_Send <= '0';
-      wait for 200 * Clock16x_period;
+      wait for 100 * Clock16x_period;
 
       tb_DataIn <= "01010101";
       wait for Clock16x_period;
@@ -82,29 +82,29 @@ begin
       tb_Send <= '1';
       wait for 4 * Clock16x_period;
       tb_Send <= '0';
-      wait for 200 * Clock16x_period;
+      wait for 100 * Clock16x_period;
 
-      tb_DataIn <= "11110000";
-      wait for Clock16x_period;
-      tb_Send <= '1';
-      wait for 4 * Clock16x_period;
-      tb_Send <= '0';
-      wait for 64 * Clock16x_period;
-      tb_Send <= '1';
-      wait for 4 * Clock16x_period;
-      tb_Send <= '0';
-      wait for 200 * Clock16x_period;
+      -- tb_DataIn <= "11110000";
+      -- wait for Clock16x_period;
+      -- tb_Send <= '1';
+      -- wait for 4 * Clock16x_period;
+      -- tb_Send <= '0';
+      -- wait for 64 * Clock16x_period;
+      -- tb_Send <= '1';
+      -- wait for 4 * Clock16x_period;
+      -- tb_Send <= '0';
+      -- wait for 100 * Clock16x_period;
 
-      tb_DataIn <= "00001111";
-      wait for Clock16x_period;
-      tb_Send <= '1';
-      wait for 4 * Clock16x_period;
-      tb_Send <= '0';
-      wait for 64 * Clock16x_period;
-      tb_Send <= '1';
-      wait for 4 * Clock16x_period;
-      tb_Send <= '0';
-      wait for 200 * Clock16x_period;
+      -- tb_DataIn <= "00001111";
+      -- wait for Clock16x_period;
+      -- tb_Send <= '1';
+      -- wait for 4 * Clock16x_period;
+      -- tb_Send <= '0';
+      -- wait for 64 * Clock16x_period;
+      -- tb_Send <= '1';
+      -- wait for 4 * Clock16x_period;
+      -- tb_Send <= '0';
+      -- wait for 100 * Clock16x_period;
 
       wait;
    end process;

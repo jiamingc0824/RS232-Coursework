@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.5 (64-bit)
+# Build 247527 by xbuild on Mon Mar 25 17:13:07 MDT 2013
+# Start of session at: Thu Dec 05 11:39:40 2019
+# Process ID: 2768
+# Log file: C:/Users/Jia Ming/Desktop/RS232 Coursework/RS232/RS232/planAhead_run_4/planAhead.log
+# Journal file: C:/Users/Jia Ming/Desktop/RS232 Coursework/RS232/RS232/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Jia Ming/Desktop/RS232 Coursework/RS232/RS232/pa.fromNetlist.tcl}

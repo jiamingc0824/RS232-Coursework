@@ -13,7 +13,7 @@ architecture Behavioral of RS232Rxd is
     -- state definitions
 
     type stateType is (stIdle, stData, stStop);
-    attribute enum_encoding of statetype : type is "00 01 11";
+    attribute enum_encoding of statetype        : type is "00 01 11";
     signal presState                            : stateType;
     signal nextState                            : stateType;
     signal iReset, iRxd1, iRxd2, iClock1xEnable : std_logic;
@@ -42,7 +42,7 @@ begin
                 iClock1xEnable <= '1';
             elsif iClock1xEnable = '1' then
                 iClockDiv <= iClockDiv + '1';
-                iClock1x <= iClockDiv(3);
+                iClock1x  <= iClockDiv(3);
             end if;
         end if;
 

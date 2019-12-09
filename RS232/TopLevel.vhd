@@ -68,9 +68,9 @@ begin
 
     U1 : RS232 port map(
         Reset    => Reset,
-        Send => Send,
-        DataIn => DataIn,
-        Txd => Txd,
+        Send     => Send,
+        DataIn   => DataIn,
+        Txd      => Txd,
         Clock16x => iClock16x,
         Rxd      => Rxd,
         DataOut1 => iDataOut1,

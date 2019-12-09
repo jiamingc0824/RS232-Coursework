@@ -65,8 +65,7 @@ begin
 
     process (presState, iClock1xEnable, iNoBitsSent)
     begin
-        -- signal defaults
-        iReset <= '0';
+        iReset           <= '0';
         iEnableShift     <= '0';
         iEnableTxdBuffer <= '0';
 
